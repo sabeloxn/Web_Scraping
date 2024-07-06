@@ -1,0 +1,69 @@
+What is Python Requests module?
+Requests is an Apache2 Licensed HTTP library, that allows to send HTTP/1.1 requests using Python.
+
+Making a Request:
+Python requests module has several built-in methods to make Http requests to specified URI using GET, POST, PUT, PATCH or HEAD requests. A Http request is meant to either retrieve data from a specified URI or to push data to a server. It works as a request-response protocol between a client and a server. 
+
+How to make a GET request to an endpoint:
+The GET method is used to retrieve information from the given server using a given URI. 
+The GET method sends the encoded user information appended to the page request. The page and the encoded information are separated by the ‘?’ character. 
+
+For example:
+https://www.google.com/search?q=GeeksForGeeks
+
+How to make GET request through Python Requests:
+Python’s requests module provides in-built method called get() for making a GET request to a specified URI.
+
+Syntax:
+requests.get(url, params={key: value}, args)
+
+Advantages of Using the GET Method:
+Since the data sent by the GET method are displayed in the URL, it is possible to bookmark the page with specific query string values.
+GET requests can be cached and GET requests remain in the browser history.
+GET requests can be bookmarked.
+
+Disadvantages of Using the GET Method:
+The GET method is not suitable for passing sensitive information such as the username and password, because these are fully visible in the URL query string as well as potentially stored in the client browser’s memory as a visited page.
+Because the GET method assigns data to a server environment variable, the length of the URL is limited. So, there is a limitation for the total data to be sent.
+
+More On Http Request Methods: https://www.geeksforgeeks.org/python-requests-tutorial/
+
+//---------------------------------------------------------------------------------+
+// RESPONSE OBJECT                                                                 +
+//---------------------------------------------------------------------------------+ 
+When one makes a request to a URI, it returns a response.
+This Response object in terms of python is returned by requests.method(), method being – get, post, put, etc. Response is a powerful object with lots of functions and attributes that assist in normalizing data or creating ideal portions of code.
+
+Response Methods: https://www.geeksforgeeks.org/python-requests-tutorial/
+
+//---------------------------------------------------------------------------------+
+// AUTHENTICATING USING PYTHON REQUESTS                                            +
+//---------------------------------------------------------------------------------+
+To authenticate, typically one provides authentication data through Authorization header or a custom header defined by server.
+
+Syntax:
+requests.get('https://api.github.com / user, ', auth = HTTPBasicAuth('user', 'pass')) 
+
+//---------------------------------------------------------------------------------+
+// SSL CERTIFICATE VERIFICATION                                                    +
+//---------------------------------------------------------------------------------+
+By default, SSL verification is enabled, and Requests will throw a SSLError if it’s unable to verify the certificate.
+
+One can pass the link to the certificate for validation via python requests only:
+requests.get('https://github.com', verify ='/path/to/certfile') (This would work in the case that the path provided, (?is correct for SSL certificate?), for github.com)
+//---------------------------------------------------------------------------------+
+// SESSION OBJECTS                                                                 +
+//---------------------------------------------------------------------------------+
+Session object allows one to persist certain parameters across requests. 
+It also persists cookies across all requests made from the Session instance and will use urllib3’s connection pooling. So if several requests are being made to the same host, the underlying TCP connection will be reused, which can result in a significant performance increase. 
+
+Using Session Objects: https://www.geeksforgeeks.org/python-requests-tutorial/
+
+#--
+PRO TIP:
+There are many libraries to make an HTTP request in Python, which are httplib, urllib, httplib2, treq, etc., but requests are one of the best with cool features. 
+If any attribute of requests shows NULL, check the status code using the below attribute: 
+
+requests.status_code
+
+If status_code doesn’t lie in the range of 200-29. You probably need to check the method begin used for making a request + the URL you are requesting for resources.

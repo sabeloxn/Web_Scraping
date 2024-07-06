@@ -1,0 +1,8 @@
+Convert JSON data Into a Custom Python Object (also known as decoding or deserializing JSON data):
+To decode JSON data we can make use of the json.loads() method and the object_hook parameter. 
+The object_hook parameter is used so that, when we execute json.loads(), the return value of object_hook will be used, instead of the default dict value.
+
+We can also implement custom decoders using object_hook:
+x = json.loads(data, object_hook = lambda d : namedtuple('X', d.keys()) (*d.values()))
+
+More comprehensible in code -> json_to_python_object.py

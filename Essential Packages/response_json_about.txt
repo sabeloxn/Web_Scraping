@@ -1,0 +1,18 @@
+response.json() – Python requests
+How to check the response.json() out of a response object.
+
+How to use response.json() using Python requests?
+response.json() is a part of the requests module
+response.json() is widely used to fetch data from APIs.
+//---------------------------------------------------------------------------------+
+//Parsing Python Requests, Response JSON Content                                   +
+//---------------------------------------------------------------------------------+
+how to use response.json() to load JSON data into Python objects:
+
+1. Fetch the data from an API using requests.get() method and store in variable
+2. Use json() method which prints the JSON data in the Python dictionary format
+
+//---------------------------------------------------------------------------------+
+//Convert Request Response to Dictionary in Python                                 +
+//---------------------------------------------------------------------------------+
+->response_json.py

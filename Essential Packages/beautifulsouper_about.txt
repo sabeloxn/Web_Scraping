@@ -1,0 +1,14 @@
+BeautifulSoup Library
+Beautiful Soup provides a few simple methods and Pythonic phrases for guiding, searching, and changing a parse tree: a toolkit for studying a document and removing what you need. It doesn’t take much code to document an application.
+
+Beautiful Soup automatically converts incoming records to Unicode and outgoing forms to UTF-8. You don’t have to think about encodings unless the document doesn’t define an encoding, and Beautiful Soup can’t catch one. Then you just have to choose the original encoding. Beautiful Soup sits on top of famous Python parsers like LXML and HTML, allowing you to try different parsing strategies or trade speed for flexibility.
+
+//---------------------------------------------------------------------------------+
+// Finding Elements by Class                                                       +
+//---------------------------------------------------------------------------------+
+
+The soup object contains all the data in the nested structure which could be programmatically extracted. 
+
+Better in code -> beautifulsoup.py
+
+For more : https://www.geeksforgeeks.org/how-to-scrape-websites-with-beautifulsoup-and-python/
