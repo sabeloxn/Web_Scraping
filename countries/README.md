@@ -2,4 +2,4 @@
 
 Test
 
-<img src="./screenshot/ScreenRecording.gif" alt="Screenshot" width="900" height="1280">
+<img src="./screenshot/ScreenRecording.gif" alt="Screenshot" width="1280" height="900">
