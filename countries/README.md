@@ -2,6 +2,6 @@
 
 Test
 
-<img src="./screenshot/Screenshot.png" alt="Screenshot">
+<img src="./screenshot/ScreenRecording.gif" alt="Screenshot" >
 
 ![screen-gif](./screenshot/ScreenRecording.gif)
