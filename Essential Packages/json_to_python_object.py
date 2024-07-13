@@ -54,7 +54,7 @@ except ImportError:
 	from argparse import Namespace
 
 # creating the data
-data = '{"name" : "GeekNamespace", "id" : 3, "location" : "Bangalore"}'
+data = '{{"name" : "GeekNamespace", "id" : 3, "location" : "Bangalore"},{"name" : "mespace", "id" : 2, "location" : "Bang"}}'
 
 # creating the object
 x = json.loads(data, object_hook = lambda d : Namespace(**d))
